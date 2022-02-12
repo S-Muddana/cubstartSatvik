@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
+  <!-- BEGIN PART 1 -->
+  <link rel="stylesheet" href="styles.css">
+  <title>Satvik Muddana</title>
+  <!-- END PART 1 -->
+</head>
+
+<body class="light" id="top">
+  <header class="header center diagonal__color">
+    <!-- BEGIN PART 2 -->
+    <h3>
+      <a class="link">SM</a>
+    </h3>
+    <!-- END PART 2 -->
+    <nav class="nav center">
+      <ul class="nav__list center">
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#projects">Projects</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#skills">Skills</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#contact">Contact</a>
+        </li>
+      </ul>
+
+      <!-- BEGIN PART 5 -->
+
+      <button type="button" aria-label="toggle theme" class="btn btn--icon">
+        <i id="btn-theme" class="fas fa-moon"></i>
+      </button>
+
+      <!-- 
+        5.1: What does this button tag correspond to on the site? 
+
+      This button refers to the button to the right of "contact" with the moon logo that switches the website between a light and dark theme.
+      -->
+
+      <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- 
+        5.2: Try Ctrl-F in styles.css and look the class 'nav__hamburger'. You'll notice that it
+        appears in 2 places. Why is one of the rules 'display: none' on one instance? How do you
+        make it so that this button appears on screen? 
+        Hint: remember what @media (max-width: 600px) means.
+
+        One of the rules is 'display: none' so that the button only appears when the max-width is 600px. Then the @media tag will override it to 'display: flex'.
+        To make the button appear, we have to change the max-width to 600px.
+       -->
+
+      <!-- END PART 5 -->
+    </nav>
+  </header>
+
+  <main>
+    <div class="about center">
+      <!-- BEGIN PART 6 -->
+      <div class="trees">
+        <h1 style="background-color:transparent; margin-top:170px;">Hi, I'm <span class="about__name">Satvik Muddana</span></h1>
+        <h2 class="about__role">Software Developer</h2>
+      </div>
+      <p class="about__desc">Hello! I am a student in the Computer Science field. I love learning new technologies such as Machine Learning and Full Stack 
+        Development to expand my horizons on what's out there. I am looking for opportunities in these fields. I hope we can connect!
+      </p>
+      <!-- END PART 6 -->
+      <div class="about__contact center">
+        <a href="https://example.com">
+          <span class="btn btn--outline">Resume</span>
+        </a>
+
+        <a href="https://github.com/" aria-label="github" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-github"></i>
+        </a>
+
+        <a href="https://linkedin.com/in/" aria-label="linkedin" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+    <section id="projects" class="section projects">
+      <h2 class="section__title">Projects</h2>
+      <div class="projects__grid">
+        <!-- BEGIN PART 8 -->
+        <div class="project">
+          <h3>Sign Language Detector</h3>
+          <p class="project__description">
+            Developed a robust machine learning algorithm to train a program to recognize human hands forming 
+            specific American sign language characters using Python. 
+            Led the data collection and label process with over 16,000 images through Labelbox. 
+            Oversaw the model training process with a training data set using Python and YOLO Darknet object 
+            detection libraries in AI-Camp provided jupyter notebooks and servers. 
+            Created a website using pythonanywhere, HTML, and Javascript to process uploaded images and display 
+            the detected letter and confidence level.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">Python</li>
+            <li class="project__stack-item">HTML</li>
+            <li class="project__stack-item">JavaScript</li>
+          </ul>
+
+          <a href="https://github.com" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://example.com" aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+        <div class="project">
+          <h3>ClubbyKid</h3>
+          <p class="project__description">
+            Designed and implemented a WordPress website that serves as a catalog for children in Walnut, CA to find
+            extracurricular interests outside of school. Programmed a web scraper tool using Python’s Beautiful Soup 
+            library to gather data from web searches for listings of this website.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">HTML</li>
+            <li class="project__stack-item">JavaScript</li>
+          </ul>
+
+          <a href="https://github.com" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://example.com" aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+        <!-- END PART 8 -->
+      </div>
+    </section>
+
+    <div class="experiences" id="experiences">
+      <h2 class="section__title">Experiences</h2>
+      <div class="timeline">
+        <div class="container left">
+          <div class="content">
+            <h3>IST - Telecommunications Network Engineering Assistant</h3>
+            <h5>Sep 2021 - Present</h5>
+            <p>Implemented and supported data networking services for the UC Berkeley Campus. 
+              Performed user services while surveying the network locations on campus and overseeing the physical
+              tasks required to implement the service. Installed network cabling and configured cables and other 
+              devices to proper subnets.
+            </p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h3>IT DevOps/App Development Intern</h3>
+            <h5>Jul 2020 - Aug 2020</h5>
+            <p>Investigated possible idea methods to improve the customer satisfaction/experience of the order tracking
+              process. Devised and programmed a mobile application using Microsoft Xamarin software and C# so that Utility. 
+              Trailer customers can track their orders online. Built a comprehensive frontend user interface through XAML while 
+              working with a mock API. Incorporated a GPS tracking feature within the application so customers can locate and pickup 
+              their trailer orders in large parking lots. Demonstrated the application to Utility IT Managers after completion.
+              </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <!-- BEGIN PART 10 -->
+      <h2 class="section__title">Skills</h2>
+      <ul class="skills__list">
+        <li class="skills__list-item btn btn--plain">Python</li>
+        <li class="skills__list-item btn btn--plain">Java</li>
+        <li class="skills__list-item btn btn--plain">HTML</li>
+      </ul>
+      <!-- END PART 10 -->
+    </section>
+    <section class="section contact center" id="contact">
+      <h2 class="section__title">Contact</h2>
+      <a href="mailto:youremail@gmail.com">
+        <span class="btn btn--outline">Email me</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <!-- BEGIN PART 12 -->
+    <a href="/" class="link footer__link">
+      Created By Satvik Muddana | Copyright 2022 By the Satvik Muddana is Cool Foundation
+    </a>
+    <!-- END PART 12 -->
+  </footer>
+
+
+  <div class="scroll-container">
+    <div class="scroll-top">
+      <a aria-label="Scroll up" href="#top">
+        <i aria-hidden="true" class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

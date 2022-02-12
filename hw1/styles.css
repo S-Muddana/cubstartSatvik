@@ -1,0 +1,638 @@
+/*===============
+  global styles
+===============*/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background-color: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  color: var(--clr-fg);
+  background-color: var(--clr-bg);
+}
+
+.light {
+  --clr-bg: #fcfcfc;
+  --clr-bg-alt: #fff;
+  --clr-fg: #555;
+  --clr-fg-alt: #444;
+  --clr-primary: #2978b5;
+  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.dark {
+  --clr-bg: #23283e;
+  --clr-bg-alt: #2a2f4c;
+  --clr-fg: #bdbddd;
+  --clr-fg-alt: #cdcdff;
+  --clr-primary: #90a0d9;
+  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+::-moz-selection {
+  background: var(--clr-primary);
+  color: var(--clr-bg);
+}
+
+::-webkit-selection,
+::selection {
+  background: var(--clr-primary);
+  color: var(--clr-bg);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  color: var(--clr-fg-alt);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+}
+
+/*===================
+  buttons and links
+===================*/
+
+.link {
+  color: var(--clr-primary);
+  padding: 0 0 0.3em 0;
+  position: relative;
+}
+
+.link:hover {
+  color: var(--clr-primary);
+}
+
+/* BEGIN PART 4 */
+
+.link::before {
+  content: "";
+  display: inline;
+  width: 0%;
+  height: 0.2em;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--clr-primary);
+  transition: width, ease-in, 0.4s;
+}
+
+.link:hover::before,
+.link:focus::before {
+  width: 100%;
+}
+
+/* END PART 4 */
+
+.link--nav {
+  color: var(--clr-fg);
+  text-transform: lowercase;
+  font-weight: 500;
+}
+
+.link--icon {
+  color: var(--clr-fg);
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: block;
+  padding: 0.8em 1.4em;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn--outline {
+  color: var(--clr-primary);
+  border: 2px solid var(--clr-primary);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn--outline:focus,
+.btn--outline:hover {
+  color: var(--clr-bg);
+}
+
+.btn--outline:before {
+  content: "";
+  position: absolute;
+  background-color: var(--clr-primary);
+  right: 100%;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: right 0.2s ease-in-out;
+}
+
+.btn--outline:hover::before,
+.btn--outline:focus::before {
+  right: 0;
+}
+
+.btn--plain {
+  text-transform: initial;
+  background-color: var(--clr-bg-alt);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  border: 0;
+}
+
+.btn--plain:hover {
+  transform: translateY(-4px);
+}
+
+.btn--icon {
+  padding: 0;
+  margin-right: 20px;
+  font-size: 1.2rem;
+}
+
+.btn--icon:hover,
+.btn--icon:focus {
+  color: var(--clr-primary);
+}
+
+.btn--icon:active {
+  transform: translateY(-5px);
+}
+
+/*========
+  layout
+========*/
+
+/* BEGIN PART 3 */
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  height: 8em;
+  /* max-width: 1100px; */
+  width: 95%;
+  margin: 0 auto;
+  justify-content: flex-end;
+}
+
+/* END PART 3 */
+
+main {
+  /* max-width: 1100px; */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section {
+  margin-top: 5em;
+}
+
+.section__title {
+  text-align: center;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  margin-right: 1.5em;
+  display: flex;
+}
+
+.nav__list-item {
+  margin-left: 1.5em;
+}
+
+.nav__hamburger {
+  display: none;
+  width: 1em;
+}
+
+/* BEGIN PART 7 */
+
+.about {
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+/* END PART 7 */
+
+.about__name {
+  color: var(--clr-primary);
+  background-color: transparent;
+}
+
+.about__role {
+  margin-top: 1.2em;
+  background-color: transparent;
+}
+
+.about__desc {
+  font-size: 1rem;
+  max-width: 600px;
+  background-color: transparent;
+}
+
+.about__desc,
+.about__contact {
+  margin-top: 2.4em;
+  background-color: transparent;
+}
+
+.about .link--icon {
+  margin-right: 0.8em;
+  background-color: transparent;
+}
+
+.about .btn--outline {
+  margin-right: 1em;
+  background-color: transparent;
+}
+
+/* BEGIN PART 9 */
+
+.projects__grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+}
+
+/* END PART 9 */
+
+.project {
+  padding: 2em;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s linear;
+}
+
+.project:hover {
+  transform: translateY(-7px);
+}
+
+.project__description {
+  margin-top: 1em;
+}
+
+.project__stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.2em 0;
+}
+
+.project__stack-item {
+  margin: 0.5em;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--clr-fg-alt);
+}
+
+.project .link--icon {
+  margin-left: 0.5em;
+}
+
+/* BEGIN PART 11 */
+
+.skills__list {
+  max-width: 450px;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: auto;
+  justify-content: center;
+}
+
+.skills__list-item {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* END PART 11 */
+
+.contact {
+  flex-direction: column;
+}
+
+.footer {
+  padding: 3em 0;
+  margin-top: 4em;
+  text-align: center;
+}
+
+.footer__link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--clr-fg);
+}
+
+.scroll-top {
+  display: none;
+  position: fixed;
+  bottom: 1em;
+  right: 2em;
+  background-color: transparent;
+  font-size: 1.8rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 6em;
+  }
+
+  .section {
+    margin-top: 4em;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    padding: 4em 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 5em;
+    background-color: var(--clr-bg);
+    width: 0;
+    overflow: hidden;
+    transition: width 0.2s ease-in-out;
+  }
+
+  .display-nav-list {
+    width: 100%;
+  }
+
+  .nav__list-item {
+    margin: 0.5em 0;
+  }
+
+  .nav__hamburger {
+    display: flex;
+    margin-left: 0.8em;
+  }
+
+  .about {
+    align-items: flex-start;
+    margin-top: 2em;
+  }
+
+  .footer {
+    padding: 2em;
+    margin-top: 3em;
+  }
+
+  .scroll-container {
+    display: none;
+  }
+}
+
+/* html, body {
+  width: 100%;
+  height:100%;
+} */
+
+.diagonal__color {
+    width: 100%;
+    background: linear-gradient(-45deg, #852306, #5a0a28, #094155, #07503f);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.trees {
+  flex-direction: column;
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+  background-color: hsla(200,40%,30%,.4);
+  background-image:   
+    url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
+    url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+    url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+    url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+    url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+  background-repeat: repeat-x;
+  background-position: 
+    0 20%,
+    0 100%,
+    0 50%,
+    0 100%,
+    0 0;
+  background-size: 
+    2500px,
+    800px,
+    500px 200px,
+    1000px,
+    400px 260px;
+  animation: 50s para infinite linear;
+  }
+
+@keyframes para {
+  100% {
+    background-position: 
+      -5000px 20%,
+      -800px 95%,
+      500px 50%,
+      1000px 100%,
+      400px 0;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    padding-top: 10px;
+    background-color: #474e5d;
+    font-family: Helvetica, sans-serif;
+    position: relative;
+    width: 58%;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+  
+  /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+  /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+  /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+  /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }
