@@ -1,0 +1,56 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  flex-direction: column;
+  background-color: #b9fdfd;
+}
+
+#bored-button {
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+}
+
+#card {
+  text-shadow: 1px 1px purple;
+  text-transform: capitalize;
+}
+
+.square {
+  margin: 20px;
+  background-color: #a3fdfd;
+  width: 450px;
+  height: 250px;
+  text-align: center;
+}
+
+.bored {
+  width: 100%;
+  height: 100%
+}
+
+.big_square {
+  width: 490px;
+  height: 290px;
+  text-align: center;
+}
+.diagonal__color {
+    background: linear-gradient(-45deg, #ad2901, #a7013e, #007eac, #008b6b);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
