@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(-45deg, #e93a05, #d8326f, #a932d8, #2ec09e);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
